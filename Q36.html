@@ -1,0 +1,16 @@
+<input type="text" id="x1">
+<p id="x2"></p>
+
+<script>
+    document.getElementById("x1").onclick = function()
+        {
+            var value= parseFloat(document.getElementById('x1').value);
+            if(!isNaN(value)){
+                var square = Math.pow(value,2);
+                document.getElementById("x2").innerHTML ="square:" + square;
+            }else{
+                document.getElementById("x2").innerHTML ="Please Enter a Valid number."
+            }
+        };
+    
+</script>

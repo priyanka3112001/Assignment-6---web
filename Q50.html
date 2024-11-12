@@ -1,0 +1,20 @@
+<input type="text" id="name" placeholder="Enter Name">
+<p id="nameValidationResult"></p>
+
+<script>
+  function validateName() {
+    var name = document.getElementById('name').value;
+    var result = document.getElementById('nameValidationResult');
+    var regex = /^[A-Za-z]+$/;
+
+    if (regex.test(name)) {
+      result.textContent = "Valid Name";
+      result.style.color = 'green';
+    } else {
+      result.textContent = "Invalid Name (Only alphabets allowed)";
+      result.style.color = 'red';
+    }
+  }
+
+  document.getElementById('name').addEventListener('input', validateName);
+</script>

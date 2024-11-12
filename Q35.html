@@ -1,0 +1,11 @@
+<input type="text" id="x1" placeholder="enter text">
+<p id="x2"></p>
+<button onclick="displaytext()">Display</button>
+
+<script>
+    function displaytext(){
+        var text = document.getElementById('x1').value;
+
+        document.getElementById('x2').innerText = text;
+    }
+</script>

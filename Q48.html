@@ -1,0 +1,20 @@
+<input type="text" id="mobileNumber" placeholder="Enter Mobile Number">
+<p id="mobileValidationResult"></p>
+
+<script>
+  function validateMobile() {
+    var mobile = document.getElementById('mobileNumber').value;
+    var result = document.getElementById('mobileValidationResult');
+    var regex = /^[0-9]{10}$/;
+
+    if (regex.test(mobile)) {
+      result.textContent = "Valid Mobile Number";
+      result.style.color = 'green';
+    } else {
+      result.textContent = "Invalid Mobile Number";
+      result.style.color = 'red';
+    }
+  }
+
+  document.getElementById('mobileNumber').addEventListener('input', validateMobile);
+</script>

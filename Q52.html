@@ -1,0 +1,19 @@
+<script>
+    var arr = [1, 2, 3, 4];
+
+
+    var resultForIn = [];
+    for (let index in arr) {
+        resultForIn.push(arr[index] * arr[index]);
+    }
+    console.log('Using for-in:', resultForIn);
+
+
+    var resultForEach = [];
+    arr.forEach(value => resultForEach.push(value * value));
+    console.log('Using forEach:', resultForEach);
+
+
+    var resultMap = arr.map(value => value * value);
+    console.log('Using map:', resultMap);
+</script>

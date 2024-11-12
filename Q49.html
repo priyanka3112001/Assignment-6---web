@@ -1,0 +1,20 @@
+<input type="text" id="email" placeholder="Enter Email ID">
+<p id="emailValidationResult"></p>
+
+<script>
+  function validateEmail() {
+    var email = document.getElementById('email').value;
+    var result = document.getElementById('emailValidationResult');
+    var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+    if (regex.test(email)) {
+      result.textContent = "Valid Email ID";
+      result.style.color = 'green';
+    } else {
+      result.textContent = "Invalid Email ID";
+      result.style.color = 'red';
+    }
+  }
+
+  document.getElementById('email').addEventListener('input', validateEmail);
+</script>

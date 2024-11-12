@@ -1,0 +1,17 @@
+<input type="text" id="txt" placeholder="Enter Value">
+<p id="p1"></p>
+
+<script>
+  document.getElementById('txt').addEventListener('input', function() {
+    var value = document.getElementById('txt').value;
+    var result = document.getElementById('p1');
+
+    if (isNaN(value)) {
+      result.textContent = "It's a String";
+      result.style.color = 'blue';
+    } else {
+      result.textContent = "It's a Number";
+      result.style.color = 'green';
+    }
+  });
+</script>
